@@ -1,0 +1,44 @@
+A condition chooses which path the program follows.
+Only the first true branch in an if / else if / else chain runs
+
+if (temperature > 90) {
+    System.out.prntln("Hot");
+} else if (temperature >= 60) {
+    System.out.println("comfy");
+} else {
+    System.out.println("cold");
+}
+
+temperature = 72
+72 > 90? no
+72 >= 60? yes --> print "comfy"
+else? skipped
+
+Early return
+An early return ends the method as soon as the answer is known.
+This keeps the remaining code less nested.
+public boolean isPositive(int n) {
+    if (n <= 0) {
+        return false;
+    }
+    return true;
+}
+
+Guard conditions
+A guard condition handles invalid, empty, or special input
+before the main logic begins.
+if (nums == null || nums.length == 0) {
+    return 0;
+}
+
+Ex4. Write a method that returns "negative",
+"zero", or "positive" for an integer n
+public String isPositive(int n) {
+    if (n < 0) {
+        return "negative";
+    } else if (n = 0) {
+        return "zero";
+    } else {
+        return "positive";
+    }
+}

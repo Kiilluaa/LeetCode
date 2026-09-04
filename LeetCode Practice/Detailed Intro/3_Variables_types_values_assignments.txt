@@ -1,0 +1,128 @@
+A variable is a labled storge location
+
+declaration, assignment, and update
+
+int score = 10;     -> score -> 10
+score = 14;         -> score -> 14
+score = score + 3;  -> score -> 17
+
+Assignment direction
+Java evaluates the entire right side first. Then it stores the result in the location named on the left.
+
+declaration has two requirements
+type - what kind of value will be stored
+name - what does this value mean
+
+create and initialize a variable
+int currentLargest = 0;
+
+The first assignment to a newly declared variable is called initialization.
+A local variable must be assigned before Java lets you read it.
+
+Common beginner types
+int     - whole numbers such as -4, 0, 25
+long    - larger whole numbers. write a literal with L when needed. 3000000000L
+double  - number that can contain a decimal such as 3.5
+boolean - only true or false
+char    - one character written in single quotes such as 'A'
+String  - Text written with double quotes such as "Text"
+int[]   - A reference to an array that contains int elements
+
+Primitive values vs reference values
+Primitive - The actual simple value - int, long, double, boolean, char
+Reference - A reference that leads to an object or array - String, int[], Solution
+
+Copying a primitive value
+int a = 5;
+int b = a;
+b = 9;
+// a is still 5 because b received a copy of the primitive variable
+
+Copying an array reference
+int[] first = {4, 7};
+int[] second = first;
+second[0] = 99;
+// both variables lead to the same array, so first[0] is now 99
+
+Need to remember                Good variable       Starting value
+A running total                 int sum             0
+How many matches appeared       int count           0
+Whether something was found     boolean found       false
+The current largest array index int largestIndex 0  for a nonempty array
+The current largest value       int largest nums[0] for a nonempty array
+
+1
+Label each part: int age = 25;
+Type, variable name, assigned value.
+int = type
+variable name = age
+assigned value = 25
+
+2
+What value does x contain?
+int x = 4;
+x = x + 6;
+x = 10
+
+3
+What value does count contain?
+int count = 0;
+count++;
+count++;
+count = 2
+
+4
+Choose a type for each: number of students, exact price with
+decimals, one letter, true/false result, text.
+number of students = int
+exact price with decimals = double
+one letter = char
+true/false result = boolean
+text = String
+
+5
+Declare an int variable named total and initialize it to 0.
+int total = 0;
+
+6
+Declare a boolean named found and initialize it to false.
+boolean found = false;
+
+7
+Explain why int result; return result; does not compile inside a
+method.
+result was never initialized
+
+8
+What happens to a after this code?
+int a = 3;
+int b = a;
+b = 8;
+a is still 3 because b received a copy of a
+
+9
+What happens to first[0]?
+int[] first = {1, 2};
+int[] second = first;
+second[0] = 7;
+first[0] is 7 because they reference the same array
+
+10
+Choose the better starting value for a sum: 0 or
+nums[0]. Explain.
+0 beacuse its one value that updates, not a list of numbers
+** Use 0 because zero is the identity for addition: adding values to zero gives the correct total.
+
+11
+Choose the better starting value for a largest value
+in a nonempty array: 0 or nums[0]. Explain why one
+can fail.
+nums[0] because 
+**Use nums[0]. Starting at 0 fails when every array value is negative because 0 may not be in
+the array and is larger than every element.
+
+12
+Rewrite using an update assignment: score = score + 5;
+int score = 0;
+score = score + 5;
+** score += 5;

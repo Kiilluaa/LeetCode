@@ -1,0 +1,46 @@
+A variable is a named place for a value
+The type tells Java what kind of value can be stored
+and what operations are valid
+
+Primitive values
+int - whoel numbers, usually the default choice
+long - larger whole numbers when int may overflow
+double - decimal values
+boolean - true or false
+char - one character such as 'a'
+
+int count = 3;
+long total = 3_000_000_000L;
+double average = 4.5;
+boolean found = false;
+char letter = 'a';
+
+Reference Values
+Arrays, strings, lists, sets, nodes, and objects are reference values.
+The variable does not contain the entire object.
+It contains a reference that leads to the object.
+
+Primitive:
+count [3]
+
+Reference:
+nums [reference] -----> [4][7][2]
+
+Assignment and update
+int score = 10;  // create score with 10
+score = 14;  // replace 10 with 14
+score += 3;  // score becomes 17
+score++;  // score becomes 18
+
+Int overflow
+An int has a limited range. If a calculation may exceed about
+2.1 billion, use long before the muliplication happens
+int a = 1_500_000_000;
+long wrong = a * 2;  // int multiplacation overflows first
+long correct = (long) a * 2;  // 3,000,000,000
+
+Ex2. Trace x after each line: int x = 5; x *= 2; x -= 3; x++;
+int x = 5;  // declare integer x as 5
+x *= 2;  // multiply 5 x 2 and redeclare x to result (x = 10)
+x -= 3;  // subract 3 from new x and redeclare (x = 7)
+x++;  // add 1 from new x and redeclare (x = 8)

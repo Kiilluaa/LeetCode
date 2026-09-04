@@ -1,0 +1,47 @@
+Variables and Data Types
+
+Primitive Types
+Type        Stores          Example
+int Whole   numbers         int count = 0;
+long Large  whole numbers   long total = 0L;
+double      decimals        double average = 0.0;
+boolean     true or false   boolean found = false;
+char        one character   char letter = 'a';
+
+Reference Types
+Type                        Example                 Purpose
+String                      String word = "java";   indexes, counts, values
+int[]                       int[] nums = [1, 2, 3]; Fixed-size sequence of ints
+ArrayList<integer>          new ArrayList<>();      Resizable list
+HashMap<integer, integer>   new HashMap<>();        Key-value lookup
+HashSet<integer>            new HashSet<>();        Unique values
+
+Declare, assign, update
+int score;          declaration
+score = 10;         assignment
+score = score + 5   update
+score += 5;         same update, shorter
+score++;            add 1
+score--;            subtract 1
+
+int vs long
+an int holds values from about -2.1 billion to 2.1 billion
+use long when a sum or multiplication may exceed that range
+
+int n = 100000;
+long square = (long) n * n;  cast before multiplication
+
+long total = 0L;
+for (int value : nums) {
+    total += value;
+}
+** Long request = n * n can overflow before the value is assigned
+to long. Cast one operand first
+
+Default values vs local variables
+Fields receive default values such as 0, false, or null
+Local variables inside a method must be assigned before use
+
+Ex2.  Choose int or long for the sum of 100,000 values 
+where each value may be 100,000.
+long

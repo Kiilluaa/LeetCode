@@ -1,0 +1,126 @@
+A class is a blueprint. an object is one created instance
+
+An object can hold its own state
+class Counter {
+    int value;
+    public void increment() {
+        value++;
+    }
+}
+
+Two separate objects
+Counter first = new Counter();
+Counter second = new Counter();
+first.increment();
+// first.value is 1; second.value is 0
+
+Instance methods belong to an object
+Kind                Called with             Can directly use instance fields?
+Instance method     object.method()         Yes
+Static method       ClassName.method()      No object is required
+
+Why is main Static
+Java needs a method it can call before your program has created any objects. Because main is static, Java can
+call Main.main(...) directly through the class.
+
+Simple local program with a static helper
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(square(5));
+    }
+    public static int square(int n) {
+        return n * n;
+    }
+}
+
+The common compiler error
+Static main trying to call an instance method directly
+
+public class Main {
+    public static void main(String[] args) {
+        int answer = square(5); // error if square is not static
+    }
+    public int square(int n) {
+        return n * n;
+    }
+}
+
+There are two fixes: make square static, or create a Main object and call object.square(5). For beginner algorithm
+practice in a local Main class, the first fix is simpler.
+
+1
+What does static mean at a beginner level?
+You can call the method within the class
+** static means the member belongs to the class itself and can be used without first creating an
+object.
+
+2
+How do you normally call a static method named square in class MathTools?
+MathTools.square()
+
+3
+How do you normally call an instance method named increment
+on an object named counter?
+counter.increment()
+
+4
+Why can Java call main before creating a Main object?
+main is static
+**so the runtime can call it through the Main class itself.
+
+5
+Should you automatically add static to a LeetCode method?
+no
+
+6
+In a simple local Main program, why are static helper methods
+convenient?
+You can call them without creating an object
+
+7
+Which kind of method can directly use an object's instance field?
+instance
+
+8
+Correct the local-program error by changing one word:
+public int square(int n) { return n * n; }
+The method is called directly from static main.
+public static int square(int n) {
+    return n * n;
+}
+
+9
+Give the alternative fix without changing square to static.
+public int square(int n) {
+    return n * n; 
+}
+
+**Create an object, then call the method: Main app = new Main(); int answer = app.square(5);
+
+10
+Classify: Integer.parseInt("12") is called through a class name. Is
+it static or instance style?
+Instance
+**Static (Integer is the class)
+
+11
+Classify: text.charAt(0) is called through a String object. Is it
+static or instance style?
+Instance
+
+12
+Does static mean that a variable can never change?
+no 
+**static describes ownership, not whether a value changes. final is the keyword associated with preventing
+reassignment.
+
+13
+What is the safest rule when LeetCode already provides the
+method declaration?
+Leave it as is, do not redeclare or label methods as static
+
+14
+Can a static method directly use an instance field without an
+object reference?
+No, it must be a static field
+** It needs an object reference to identify which object's field to use.

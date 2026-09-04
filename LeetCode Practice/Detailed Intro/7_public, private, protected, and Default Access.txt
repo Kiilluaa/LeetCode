@@ -1,0 +1,103 @@
+Access controls who is allowed to call a class method
+
+Access                      Who can use it?                         Beginner use
+public                      Code anywhere that can see the class.   LeetCode-required methods; public APIs.
+private                     Only code inside the same class.        Internal helper methods and hidden fields.
+protected                   Same package and subclasses.            Inheritance-focused code; usually not needed for easy LeetCode.
+no modifier                 Only the same package.                  Package-level design; usually not needed for beginner exercises.
+
+Access does not change the algorithm
+A public required method and a private helper
+
+public int countEven(int[] nums) {
+    return countMatching(nums);
+}
+
+private int countMatching(int[] nums) {
+    int count = 0;
+    for (int value : nums) {
+        if (value % 2 == 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+Both methods can contain the same kinds of variables, loops, and return statements. The access modifier only
+decides where the method may be called from.
+
+Local variables do not use access modifiers
+Access modifiers belong on class members, not local variables
+
+public int sum(int[] nums) {
+    int total = 0; // correct local variable
+    // public int total; // invalid here
+    return total;
+}
+
+Decision Tree
+Choose public or private
+
+Required?   Did LeetCode or another caller need to call this exact
+method? Use public.
+Helper?     Is the method only used inside the same class to organize
+your solution? Use private.
+Local?      Is it a variable declared inside a method? Use no access
+modifier.
+Unsure?     For easy LeetCode, keep the supplied public method and
+avoid adding modifiers to local variables.
+
+1
+What does public control?
+Visibility outside of the class
+
+2
+What does private control?
+Only code within the class can use it
+
+3
+Should the method LeetCode gives you normally remain public?
+Yes
+
+4
+Should a helper used only inside Solution normally be public or
+private?
+private
+
+5
+Can a local variable inside a method be declared public int count = 0;?
+no, it is a local variable
+
+6
+Does changing a method from public to private change the loop
+logic inside it?
+no, it just restricts who can access the code
+
+7
+Choose an access modifier for a method that outside code must
+call.
+public
+
+8
+Choose an access modifier for an internal validation helper.
+private
+
+9
+Which modifiers are usually unnecessary for easy LeetCode:
+protected and package-private, or public and private?
+protected and package-private
+
+10
+Correct this code inside a method: private boolean found = false;
+boolean found = false;
+
+11
+Explain why public int largestValue(...) is normal on LeetCode
+even when you never call it yourself.
+LeetCode has a main class that calls the methods which needs it to be public
+**LeetCode's hidden code is an outside caller
+
+12
+Can a private method call another private method in the same
+class?
+Yes because they are in the same class

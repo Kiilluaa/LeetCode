@@ -1,0 +1,91 @@
+An expression produces a value
+
+Two expressions
+int total = 4 + 3 * 2;
+boolean large = total > 8;
+
+the expression 4 + 3 * 2 produces 10 because mult happens before add
+the expression total > 8 produces true
+
+Arithmetic Operators
++   addition
+-   subtraction
+*   multiplication
+/   division
+%   modulo/remainder
+
+**Integer division When both operands are int values, Java discards the decimal part. 7 / 2 is 3, not 3.5
+
+Comparison and Logical Operators
+> greater than
+< less than
+>= greater than or equal
+<= less than or equal
+== equal primitive values
+!= not equal
+&& both conditions must be true
+|| at least one condition must be true
+! reverse true and false
+
+Combining conditions
+int age = 20;
+boolean allowed = age >= 18 && age < 65;
+
+Increment and compound assignment
+Long form          Short form       Meaning
+count = count + 1; count++;         Add one.
+count = count - 1; count--;         Subtract one.
+sum = sum + value; sum += value;    Add value to sum.
+score = score * 2; score *= 2;      Double score.
+
+1
+Evaluate: 3 + 4 * 2
+11
+
+2
+Evaluate with int values: 11 / 4
+2
+
+3
+Evaluate: 11 % 4
+3
+
+4
+Write a boolean expression that is true when n is even.
+boolean isEven = n % 2 == 0;
+
+5
+Write a boolean expression that is true when age is at least 18.
+boolean age = n >= 18;
+** age >= 18
+
+6
+Write a condition that is true when x is between 1 and 10,
+inclusive.
+boolean inside = x >= 1 && x <= 10;
+
+7
+Evaluate: true && false
+false because for it to be true, they both have to be true
+
+8
+Evaluate: true || false
+true, because its true if one is true
+
+9
+Evaluate: !(5 > 2)
+5 > 2 = true
+!true = false
+
+10
+Rewrite using short form: total = total + nums[i];
+total += nums[i];
+
+11
+Rewrite using short form: i = i + 1;
+i++;
+
+12
+What value is stored?
+int result = (8 - 2) / 3;
+2

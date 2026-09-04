@@ -1,0 +1,47 @@
+Conditions
+
+Basic if statement
+if (score >= 90) {
+    return "A";
+} else if (score >= 80) {
+    return "B";
+} else {
+    return "C";
+}
+
+Early returns
+early returns handle spectial cases first and
+keep the main logic less nested
+public boolean isPositive(int n) {
+    if (n <= 0) {
+        return false;
+    }
+    return true;
+}
+
+Ternary operator
+int smaller = a < b ? a : b;
+String result = valid ? "yes" : "no";
+
+Use the ternary operator for a short choice between two values
+Use if/else for multi-step logic
+
+Switch
+Switch (command) {
+    case "add":
+        total++;
+        break;
+    case "remove";
+        total--;
+        break;
+    default:
+        return false;
+}
+
+Ex4. Write an early return that returns 0 when
+an array is null or empty.
+if (thisArray.length == 0 || thisArray == "null") {
+    return 0;
+} else {
+    return thisArray.length;
+}

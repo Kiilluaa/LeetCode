@@ -1,0 +1,36 @@
+Operators
++
+-
+*
+/
+%
+
+int quotient = 7 / 2;
+int remainder = 7 % 2;
+double exact = 7.0 / 2;
+boolean even = number % 2 == 0;
+
+Comparison
+a == b  // equal
+a != b  // not equal
+a < b
+a > b
+a >= b
+
+Logical Operators
+conditionA && conditionB  // both true
+conditionA || conditionB  // at least one true
+!conditionA               // reverse true/false
+
+Order of operation
+Use parentheses whenever the intended order is not immediately obvious
+boolean valid = index >= 0 && index < nums.length;
+int midpoint = left + (right - left) / 2;
+
+STRING EQUALITY
+** Use s1.equals(s2), not s1 == s2
+The == operator compares references for objects
+
+Ex3. Write a boolean expression that is true when x is between 
+10 and 20, inclusive.
+boolean isTrue = x >= 10 && x <= 20;

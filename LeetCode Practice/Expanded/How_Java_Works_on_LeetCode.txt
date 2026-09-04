@@ -1,0 +1,41 @@
+A normal Java program begins at main
+LeetCode already owns the program that reads the input
+Usually submit only the class and method that LeetCode calls
+
+Normal Java Program:
+public class Main {
+    public static void main(String[] args) {
+        int answer = add(2, 3);
+        System.out.println(answer);
+    }
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+}
+
+Typical LeetCode Submission:
+class Solution {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+Code or step            What it means
+class Solution          LeetCode creates an object from this class
+public int add          The method is visible and promises to return an int
+int a, int b            LeetCode supplies two integer arguments
+return a + b            The returned value is compared with the expected answer
+
+Read a method signature from left to right
+public int twoSumCount(int[] nums, int target)
+  |     |         |            |
+access return  method name   inputs
+** Your returned value must exactly match the return type
+
+Ex1. For the signature public boolean containsDuplicate(int[] nums),
+identify the return type, method name, and input.
+
+return type = boolean
+method name = containsDuplicate
+input = one integer array named nums

@@ -1,0 +1,42 @@
+LeetCode Java Format
+
+A normal Java program:
+
+public class Main {
+    public static void main(String[] args) {
+        Sytem.out.println("Hello");
+    }
+}
+
+LeetCode Submission
+
+class solution {
+    public int sum(int a, int b) {
+        return a + b;
+    }
+}
+
+class Solution is required by most LeetCode problems
+public int means the method returns an int
+sum is the method name supplied by the problem
+int a, int b are the inputs
+return sends the results back to the test system
+
+Signature part         Meaning
+public                 LeetCode can call the method
+int                    The returned answer must be an integer
+twoSum                 The required method name
+int[] nums             An array of integers named nums
+int target             One integer named target
+
+public int[] twoSum(int[] nums, int target) {
+    // logic goes here
+}
+
+Ex1.
+For public boolean isValid(String s), identify the return type, 
+method name, input type, and input variable name.
+return type = boolean
+method name = isValid
+input type = String
+input variable name = s

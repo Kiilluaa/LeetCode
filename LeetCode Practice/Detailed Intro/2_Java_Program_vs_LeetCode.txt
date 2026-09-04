@@ -1,0 +1,94 @@
+A normal Java program needs a starting point
+A complete program you can run locally
+
+public class Main {
+    public static void main(String[] args) {
+        int[] nums = {4, 9, 2, 7};
+        int answer = largestValue(nums);
+        System.out.println(answer);
+    }
+
+    public static int largestValue(int[] nums) {
+        int largest = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > largest) {
+                largest = nums[i];
+            }
+        }
+        return largest;
+    }
+}
+
+The Java runtime begins by calling main. The main method creates inpuht, calls largestValue, receives the returned
+result, and prints it. 
+
+Step 1 - Java runtime, calls main
+Step 2 - main, creates the nums array
+Step 3 - main, Calls largestValue(nums)
+Step 4 - largestValue, calculates and returns 9
+Step 5 - main, Stores 9 in answer and prints it
+
+
+LeetCode supplies the starting code
+
+class Solution {
+    public int largestValue(int[] nums) {
+        int largest = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > largest) {
+                largest = nums[i];
+            }
+        }
+        return largest;
+    }
+}
+
+LeetCode has its own hidden test program. It creates a Solution object, calls your required method with many test inputs,
+and checks the returned answer. That is why you normally do not write main, read keyboard input, or print the final answer.
+
+** On LeetCode keep the class and method declaration exactly as provided. Write your variables and logic inside the method body **
+
+
+Printing is not the same as returning
+
+Print - Shows a value to a person or console
+        Ex. System.out.println(answer);
+Return - Sends a value back to the code that called the method
+        Ex. return answer;
+
+
+------------- PRACTICE ---------------
+
+What method does Java call first in a normal program?
+public static void main(String[] args)
+
+Why does a LeetCode submission usually not contain main?
+LeetCode has a hidden test program that calls your required method name
+
+Who calls your method on LeetCode?
+The hidden program
+
+In a local program, which line calls largestValue?
+int answer = largestValue(nums);
+largestValue(nums)
+
+What is the difference between System.out.println(answer); and return answer;?
+println prints answer to the console or user, return gives answer to the caller. 
+
+Which code usually belongs in a LeetCode submission: keyboard input, a main method, or the requested method body?
+The requested method body
+
+What does the hidden LeetCode test harness provide to your method?
+Test inputs
+
+Why should you not rename a method that LeetCode provides?
+The main method will call your method
+
+Place these in order: return result, create input, call method, store returned result.
+create input
+call method
+return result
+store returned result
+
+In class Solution { public int isEven(int n) { ... } }, what part do you normally write?
+The ... between the {}

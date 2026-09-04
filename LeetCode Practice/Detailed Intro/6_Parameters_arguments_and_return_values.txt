@@ -1,0 +1,111 @@
+Parameters are named input slots
+
+Method declaration
+public int add(int a, int b) {
+    return a + b;
+}
+
+method call
+int result = add(4, 7)
+
+How many Parameters belong inside the parentheses?
+Use one parameter for each separate piece of information the method must receive from the caller. Do not create a
+parameter for values the method can calculate internally.
+
+**Do not add unnecessary parameters A loop index, running sum, count, or largest-so-far variable
+is normally created inside the method because it is working memory, not outside input.
+
+Return sends one result back to the caller
+Return a calculated value
+public int square(int n){
+    int result = n * n;
+    return result;
+}
+
+Return type and return expression must match
+
+Early return ends the method immediately
+Stop as soon as the answer is known
+public boolean containsZero(int[] nums) {
+    for (int value : nums) {
+        if (value == 0) {
+            return true;
+        }
+    }
+    return false;
+}
+The first return true ends the method immediately. The final return false runs only if the loop finishes without finding zero.
+
+1
+In public int add(int a, int b), identify the parameters.
+int a, int b
+
+2
+In add(3, 8), identify the arguments.
+3, 8
+
+3
+Write the parameter list for a method that needs one int array
+and one int target.
+int[] nums, int target
+
+4
+Write the parameter list for a method that needs a String and a
+char.
+String name, char letter
+
+5
+Does a method that sums an array need sum as a parameter?
+Explain.
+no, the sum is done inside the method that uses the array parameter
+
+6
+Does a method that searches an array need target as a
+parameter? Explain.
+yes, the method needs to know what to search for in the array
+
+7
+Write a call to countTarget that passes nums and 5, then stores
+the returned int in count.
+int count = countTarget(nums, 5)
+
+8
+What happens immediately when Java executes return true;?
+Method ends and stores true where being called
+
+9
+Why does containsZero need return false; after the loop?
+To terminate the loop
+** No 0 was found so it has to be false
+
+10
+Correct the return type: public int isEmpty(int[]
+nums) { return nums.length == 0; }
+public boolean isEmpty(int[] nums) {
+    return nums.length == 0;
+}
+
+11
+Correct the return statement: public boolean isPositive(int n) {
+return 1; }
+public boolean isPositive(int n) {
+    return n > 0;
+}
+
+12
+Write a method that receives no parameters and returns the int 42.
+public int method() {
+    return 42;
+}
+
+13
+Can Java directly return two separate int values from one return
+statement? What is a common alternative?
+No, one value from a return statement
+**Return an array list or custom object containing them
+
+14
+For public int[] copy(int[] nums), what type must the return
+expression produce?
+array
+** int[] reference

@@ -1,0 +1,141 @@
+The anatomy of a method declaration
+public int largestValue(int[] nums) {
+    // method body
+}
+
+Piece                   Example                     Question it answers
+Access modifier         public                      Who is allowed to call this method?
+static keyword          not present                 Does the method belong to the class itself or to an object?
+Return type             int                         What type of value will be sent back?
+Method name             largestValue                What action or answer does this method represent?
+Parameter list          int[] nums                  What input values does the method receive?
+Method body             { ... }                     What steps will calculate the answer?
+
+Read the first line from left to right
+** public: callable from outside the class
+int: returns one int
+largestValue: method name
+int[] nums: receives one integer array named nums
+
+A five question construction process
+Build a method declaration
+1. Access Is this the LeetCode-required method? Use public. Is it an internal helper? Usually use private.
+2. static? On LeetCode, normally keep the provided non-static method.
+In a simple local Main program, static helpers can be called directly from static main.
+3. Return What exact type is the answer: int, boolean, String, int[], or nothing (void)?
+4. Name Use an action or result description in camelCase.
+5. Inputs Create one parameter for each separate input value the method needs.
+
+Return type examples
+Problem asks you to...                  Return type         Example declaration
+return a whole number                   int                 public int countEven(int[] nums)
+answer yes or no                        boolean             public boolean containsZero(int[] nums)
+return text                             String              public String reverse(String text)
+return an integer array                 int[]               public int[] copy(int[] nums)
+change data without returning a result  void     public void printValues(int[] nums)
+
+The name should match the returned meaning
+Two different promises
+public int largestValue(int[] nums)     // returns the value
+public int indexOfLargesValue(int[] nums)   // returns the index
+
+** Naming catches bugs If the method is named largestValue but returns an index, the name and
+result disagree. A precise name helps you notice the mistake.
+
+A method declaration is not a method call
+Kind                        Example                                 Purpose
+Declaration                 public int add(int a, int b) { ... }    Defines how the method works.
+Call                        int result = add(4, 7);                 Runs the method with argument values.
+
+1
+Label every part: public int add(int a, int b) { return a + b; }
+access modifier = public
+return type = int
+method name = add
+parameter list = int a int b
+method body = return a + b;
+
+2
+Build a public method declaration named isEven that receives
+one int n and returns boolean.
+public boolean isEven(int n) {
+    logic
+}
+
+3
+Build a public method declaration named countPositive that
+receives int[] nums and returns int.
+public int countPositive(int[] nums) {
+    logic
+}
+
+4
+Build a public method declaration named firstCharacter that
+receives String text and returns char.
+public char firstCharacter(String text) {
+    logic
+}
+
+5
+Build a public method declaration named doubleValues that
+receives int[] nums and returns nothing.
+public void doubleValues(int[] nums) {
+    logic
+}
+
+6
+What return type should a method use when the answer is yes
+or no?
+boolean
+
+7
+What return type should a method use when it returns an array
+of integers?
+int[]
+
+8
+Name a method that returns the index of the smallest array
+element.
+public int smallestElement(int[] nums) {
+    logic
+}
+**indexOfSmallestValue
+
+9
+Why is largestValue a misleading name if the method returns
+currentLargest when currentLargest stores an index?
+because 
+**currentLargest represents a position, not the value stored at that position. The method
+either needs the name indexOfLargestValue or it needs to return nums[currentLargest].
+
+10
+Classify this as a declaration or call: findMax(nums)
+call because nums type isnt declared
+
+11
+Classify this as a declaration or call: public int findMax(int[] nums)
+declaration because findMax and nums' types are declared
+
+12
+Write the full empty method shell for a public method named
+square that receives int n and returns int.
+public int square(int n) {
+    logic
+}
+
+13
+Write the method shell for a private helper named isLetter that
+receives char c and returns boolean.
+private boolean isLetter(char c) {
+    logic
+}
+
+14
+How many parameters does a method need if it receives one
+array containing 100 values?
+one (int[] variable) parameter
+
+15
+How many parameters does a method need if it separately
+receives an array and a target number?
+two parameters (int[] arrayName, int num)

@@ -1,0 +1,47 @@
+Arrays
+
+Create arrays
+int[] a = {4 7, 9};
+int[] b = new int[5];  // {0, 0, 0, 0}
+boolean[] seen = new boolean[10];
+String[] words = new String[3];  // {null, null, null}
+
+Access and modify
+int first = nums[0];
+int last = nums[nums.length - 1];
+nums[2] = 10;
+
+Useful array operations
+import java.util.Arrays;
+
+Arrays.sort(nums);
+Arrays.fill(nums, -1);
+int[] copy = Arrays.copyOf(nums, nums.length);
+boolean same = Arrays.equals(a, b);
+String text = Arrays.toString(nums);
+
+Return an array
+return new int[] (left, right);
+
+Two-dimensional arrays
+int[][] grid = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+
+int rows = grid.length;
+int cols = grid[0].length
+int value = grid[1][2];  // 6
+
+Traverse a matrix
+for (int row = 0; row < grid.lengthl row++) {
+    for (int col = 0; col < grid[row].length; col++) {
+        int value = grid[row][col];
+    }
+}
+** INDEX SAFETY Valid indexes are 0 through length -1. Accessing
+length causes ArrayIndexOutOfBoundsException. 
+
+Ex7. Create an int array of length 26 for lowercase letter counts.
+Increment the count for char c.
+for (int[])

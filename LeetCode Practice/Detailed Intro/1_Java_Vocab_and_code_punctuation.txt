@@ -1,0 +1,120 @@
+Goal: Recognize the names of the pieces before trying to write them
+Vocab for the section:
+- class
+- method
+- statement
+- expression
+- block
+- keyword
+- identifier
+- literal
+- operator
+
+
+Code is organized in layers
+
+Layer           What it is                                                  Example
+Class           A container that groups related code                        class Solution {...}
+Method          A named action that can receive input and produce output    public int add(int a, int b) {...}
+Block           Code grouped between braces                                 {int sum = a + b; return sum;}
+Statement       One complete instruction. Most end with a ;                 int sum = a + b;
+Expression      Code that produces a value                                  a + b
+Value           The actual data being used or stored                        7, true, "Java"
+
+A class contains methods. A method contains statements.
+Statements often contain expressions. Expressions produce values.
+
+
+The most common punctuation
+
+() Parentheses - Hold method parameters, method-call arguments,
+                 or a condition.
+                 Ex: add(2, 3) and if(score > 0)
+{} Braces - Mark the beginning and end of a block such as a class,
+            method, loop, or if statement
+[] Brackets - Describe an array type or select one array element.
+              Ex: int[] nums and nums[0]
+; Semicolon - Ends most complete instructions. It does not end class,
+              method, if, or loop headers.
+, Comma - Separates parameters, arguments, or values.
+. Dot - Accesses something that belongs to a class or object
+        Ex: nums.length and text.charAt(0)
+= Assignment - Evaluates the right side, then stores that value in the location on the left side
+== Comparison - Asks whether two primitive variables are equal. It produces true or false
+
+
+Keywords, identifiers, and literals
+
+Keyword - A reserved Java word with a fixed meaning, such as public, int, return, if, for, and class
+Identifier - A name chosen by the programmer, such as largestValue, nums, currentLargest, or i.
+Literal - A value written directly in the code, such as 0, 15, true, 'A', or "hello".
+Operator - A symbol that performs work, such as +, -, >, ==, &&, or ++.
+
+
+Read one line in layers
+
+Ex. int currentLargest = 0;
+int - data type, the variable stores a whole number.
+currentLargest - identifier/variable name, The name used to find the stored value
+= - Assignment operator, store the right side result in the left side variable
+0 - integer literal, the value being stored.
+; - Statement terminator, The instruction is complete
+
+
+Naming conventions
+
+class - PascalCase, Solution, BankAccount
+method - camelCase, usually an action, largestValue, countVowels
+Variable - camelCase, Describe stored meaning, currentLargest, totalScore
+constant - UPPER_SNAKE_CASE, MAX_SIZE
+
+
+-------------- PRACTICE -------------
+
+In class Solution { ... }, what is Solution called?
+Class name
+
+In public int add(int a, int b) { ... }, what is add called?
+Method name
+
+In int total = a + b;, identify the statement and the expression.
+statement = int total = a + b
+expression = a + b
+
+What punctuation marks the start and end of a method body?
+{}
+
+What punctuation separates two parameters?
+,
+
+What is the difference between = and ==?
+= is an Assignment
+== is a Comparison
+
+In nums[3], what do the brackets mean?
+array
+
+In nums.length, what does the dot do?
+accesses a member, acceses the length field that belongs to array
+
+Classify each item as keyword, identifier, or literal: public, score, 25, return, true.
+public = keyword
+score = identifier
+25 = literal
+return = keyword
+true = literal
+
+Choose the better variable name for the number of even values: x or evenCount. Explain why.
+evenCount because the variable name describes the stored value
+
+Correct the naming style: class name studentrecord, method name CountVowels, variable name Total_Count.
+StudentRecord
+countVowels
+totalCount
+
+Break this line into type, name, operator, value, and terminator: boolean found = false;
+type = boolean
+name = found
+operator = =
+value = false
+terminator = ;

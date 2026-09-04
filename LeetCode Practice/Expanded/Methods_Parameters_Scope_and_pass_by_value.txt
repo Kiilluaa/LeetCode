@@ -1,0 +1,58 @@
+A method packages one job. Its parameters are local variables
+that receive the argument values supplied by the caller.
+
+caller: countPositive(nums)
+        |
+        v
+method parameter: int[] values
+        |
+        v
+method returns: 3
+
+    public int countPositive(int[] values) {
+        int count = 0;
+
+        for (int value : values) {
+            if (value > 0) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+Scope
+A variable exists only inside the braces where it was declared.
+The loop variable value disappears after each loop iteration.
+count remains until the method returns
+
+Java passes values
+For a primitive, Java copies the primitive value.
+For an object, Java copies the reference value.
+Two variables can therefore lead to the same array.
+
+    public void change(int[] nums) {
+        nums[0] = 99;
+    }
+
+before call:
+original --> [4][7]
+
+inside method:
+nums ----/ both references lead to the same array
+
+after nums[0] = 99:
+original --> [99][7]
+
+Ex6. Write a helper method countTarget that counts how many 
+times target appears in nums.
+
+private int countTarget(int[] nums, int target) {
+    int count = 0;
+    for (int value : nums) {
+        if (value == target) {
+            count++;
+        }
+    }
+    return count;
+}

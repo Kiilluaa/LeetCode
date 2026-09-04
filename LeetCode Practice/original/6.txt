@@ -1,0 +1,50 @@
+Methods and Scope
+
+Method anatomy
+private int max(int a, int b) {
+    if (a > b) {
+        return a;
+    }
+    return b;
+}
+private: only this class uses the helper
+int: return type
+max: method name
+int a, int b: parameters
+Every path must return an int
+
+void Methods
+private void swap(int[] nums, int i, int j) {
+    int temp = nums[i];
+    nums[j] = nums[j];
+    nums[j] = temp;
+}
+Void means the method does not return a value.
+This helper changes the original array.
+
+Pass-by-value
+- Java always passes a copy of the variable value
+- For Primitives, changing the parameter does not
+change the original variable
+- For objects and arrays, the copied value is a reference,
+so the object can be muted
+- Assigning the parameter to a new object does not replace
+the caller's reference
+private void change(int number, int nums) {
+    number = 99;  // caller's int is unchanged
+    nums[0] = 99;  // caller's array is changed.
+}
+
+Scope
+for (int i = 0; i < nums.length; i++) {
+    int value = nums[i];
+}
+// i and value do not exist here
+
+Ex6. Write a private helper named isEven that accepts
+an int and returns a boolean.
+private boolean isEven(int num) {
+    if (num % 2 == 0) {
+        return
+    }
+}

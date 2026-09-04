@@ -1,0 +1,42 @@
+Loops
+
+for loop
+for (int i = 0; i < nums.length; i++) {
+    int value = nums[i];
+}
+Use an index loop when you need the position,
+neighboring values, or must modify the array.
+
+Enhanced for loop
+for (int value : nums) {
+    sum += value;
+}
+Use an enhanced loop when you only need each value.
+
+While loop
+int left = 0;
+int right = nums.length - 1;
+
+while (left < right) {
+    left++;
+    right--;
+}
+
+Common loop boundaries
+Goal                            Boundary
+Visit every index               i < nums.length
+Compare i with i + 1            i < nums.length - 1
+Include both pointer positions  left <= right
+Keep two pointers distinct      left < right
+Visit every character           i < s.length()
+
+Ex5. Write a loop that counts how many values in nums are negative
+for (int i = 0; i < nums.length; i++) {
+    int value = nums[i];
+    int count = 0;
+    if (value < 0) {
+        count++;
+    }
+
+    return count;
+}

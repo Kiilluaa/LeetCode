@@ -1,0 +1,33 @@
+An expression is code that produces a value.
+Java evaluates the smaller parts, then combines them according
+to operator precedence.
+
+Arithmetic
+a + b       Addition
+a - b       Subtraction
+a * b       Multiplication
+a / b       Division
+a % b       Remainder after division (Modulo)
+int a = 17;
+int b = 5;
+int quotient = a / b;  // 17 / 5 = 3
+int remainder = a % b;  // 17 % 5 = 2
+// 17 = (5 * 3) + 2
+
+Comparison and Logic
+int age = 20;
+boolean adult = age >= 18;      // true
+boolean valid = age >= 18 && age <= 65;     // true
+boolean outside = age < 18 || age  > 65;        // false
+boolean notAdult = !adult;       // false
+
+Order of Operations
+int result1 = 2 + 3 * 4;     // 14
+int result2 = (2 + 3) * 4;      // 20
+** Use parentheses when the intended grouping is not immediately
+obvious. Clear code is more important than proving you memorized
+precedence.
+
+Ex3. What are q and r? int q = 29 / 6; int r = 29 % 6;
+q = 4
+r = 5
