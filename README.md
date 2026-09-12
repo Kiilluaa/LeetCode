@@ -6,4 +6,4 @@
 
 ## Solutions are all added as .txt files and not Java class files.
 
-## First solutions will be without time complexity optimization. Second solutions are done to optimize algorithm efficiency. 
+## First solutions will be without time complexity optimization. Second solutions are for optimizing algorithm efficiency. 
