@@ -1,0 +1,19 @@
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        read = 1
+        write = 1
+        current = nums[0]
+
+        while read < len(nums):
+            if nums[read] == current:
+                read += 1
+            else:
+                nums[write] = nums[read]
+                current = nums[read]
+                read += 1
+                write += 1
+        return write
